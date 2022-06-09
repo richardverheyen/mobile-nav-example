@@ -1,0 +1,9 @@
+footer#Footer {
+    background-color: floralwhite;
+    > div {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

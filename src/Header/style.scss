@@ -1,0 +1,90 @@
+#Header {
+    background-color: floralwhite;
+
+    > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+
+        .burger {
+            display: none;
+            position: fixed;
+            appearance: none;
+            top: 40px;
+            left: 3rem;
+            transform: translatey(-50%);
+            border: 0;
+            padding: 0 20px;
+            background: none;
+            cursor: pointer;
+            margin-left: -20px;
+
+            > img {
+                width: 36px;
+            }
+
+            @media (max-width: 800px) {
+                display: block;
+                left: 2rem;
+            }
+
+            @media (max-width: 500px) {
+                left: 1rem;
+            }
+        }
+
+        > ul.Socials {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 80px;
+            padding: 0;
+            margin-left: auto;
+        
+            > a {
+                display: flex;
+                align-items: center;
+                padding: 0 20px;
+                line-height: 40px;
+                margin-left: 10px;
+        
+                &:last-child {
+                    margin-right: -20px;
+                }
+        
+                > img {
+                    width: 36px;
+                }
+            }
+
+            @media (max-width: 500px) {
+                display: none;
+                visibility: hidden;
+            }
+        }
+
+        > nav.Navigation {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 80px;
+
+            @media (max-width: 800px) {
+                display: none;
+            }
+        
+            > a {
+                display: flex;
+                align-items: center;
+                padding: 0 20px;
+                line-height: 40px;
+                margin-left: 10px;
+        
+                &:first-child {
+                    margin-left: -20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+}
+
+.gutters {
+    padding: 0 3rem;
+    margin: auto;
+    max-width: 1140px;
+
+    .gutters-left {
+        margin-left: -3rem;
+    }
+    .gutters-right {
+        margin-right: -3rem;
+    }
+
+    @media (max-width: 800px) {
+        padding: 0 2rem;
+
+        .gutters-left {
+            margin-left: -2rem;
+        }
+        .gutters-right {
+            margin-right: -2rem;
+        }
+    }
+
+    @media (max-width: 500px) {
+        padding: 0 1rem;
+        
+        .gutters-left {
+            margin-left: -1rem;
+        }
+        .gutters-right {
+            margin-right: -1rem;
+        }
+    }
+}
+

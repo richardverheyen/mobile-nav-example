@@ -1,0 +1,63 @@
+aside.MobileMenu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 320px;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: #e3dac7;
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: all ease 300ms;
+
+    @media (max-width: 420px) {
+        width: 100%;
+    }
+
+    &.open {
+        transform: translateX(0%);
+        visibility: visible;
+    }
+
+    > .gutters {
+        display: flex;
+        flex-direction: column;
+
+        > nav {
+            display: flex;
+            flex-direction: column;
+            padding-top: 88px;
+
+            > a,
+            > a:visited,
+            > a:link {
+                font-size: 24px;
+                color: black;
+                text-decoration: none;
+                margin-bottom: 8px;
+            }
+        }
+
+        > .Socials {
+            display: flex;
+            align-items: center;
+            padding: 0;
+
+            > a {
+                padding: 4px;
+                margin-right: 8px;
+
+                &:first-child {
+                    margin-left: -4px;
+                }
+
+                > img {
+                    width: 36px;
+                }
+            }
+        }
+    }
+
+    
+}
