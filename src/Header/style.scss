@@ -1,5 +1,10 @@
 #Header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
     background-color: floralwhite;
+    z-index: 1;
 
     > div {
         display: flex;
@@ -19,6 +24,8 @@
             background: none;
             cursor: pointer;
             margin-left: -20px;
+            z-index: 3;
+
 
             > img {
                 width: 36px;

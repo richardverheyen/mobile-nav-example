@@ -10,6 +10,7 @@ aside.MobileMenu {
     transform: translateX(-100%);
     visibility: hidden;
     transition: all ease 300ms;
+    z-index: 2;
 
     @media (max-width: 420px) {
         width: 100%;

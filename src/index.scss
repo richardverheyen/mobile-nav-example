@@ -1,5 +1,24 @@
 body {
     margin: 0;
+
+    &.mobile-nav-open {
+        overflow: hidden;
+        user-select: none;
+
+        main,
+        footer {
+            filter: blur(2px);
+        }
+    }
+}
+
+main {
+    padding: calc(20px + 80px) 0 20px;
+    // padding: 100px 0 20px;
+}
+
+h1 {
+    margin: 0;
 }
 
 .gutters {
@@ -27,7 +46,7 @@ body {
 
     @media (max-width: 500px) {
         padding: 0 1rem;
-        
+
         .gutters-left {
             margin-left: -1rem;
         }
