@@ -15,20 +15,23 @@ export default function Header() {
     }
 
     if (menuOpen) {
-      document.body.classList.add('mobile-nav-open');
-      document.querySelector('main').addEventListener('click', handleBodyClick);
-      window.addEventListener('resize', handleBodyClick);
+      document.body.classList.add("mobile-nav-open");
+      document.querySelector("main").addEventListener("click", handleBodyClick);
+      window.addEventListener("resize", handleBodyClick);
 
-      window.addEventListener('hashchange', () => {console.log('navigation occurred');});
-
+      window.addEventListener("hashchange", () => {
+        console.log("navigation occurred");
+      });
     } else {
-      document.body.classList.remove('mobile-nav-open');
+      document.body.classList.remove("mobile-nav-open");
     }
 
     return () => {
-      document.querySelector('main').removeEventListener('click', handleBodyClick);
-      window.removeEventListener('resize', handleBodyClick);
-    }
+      document
+        .querySelector("main")
+        .removeEventListener("click", handleBodyClick);
+      window.removeEventListener("resize", handleBodyClick);
+    };
   }, [menuOpen]);
 
   useEffect(() => {
@@ -45,12 +48,41 @@ export default function Header() {
         <div id="blur"></div>
         <MobileMenu menuOpen={menuOpen} />
 
-        <button 
+        <button
           className="burger"
           onClick={() => {
             setMenuOpen(!menuOpen);
-          }}>
-          <img src="/hamburger.png" alt="menu" />
+          }}
+        >
+          <svg className={`${menuOpen ? "open" : ""}`} height="40" width="40" viewBox="0 0 100 100">
+            <line
+              x1="10"
+              y1="25"
+              x2="90"
+              y2="25"
+              stroke="black"
+              strokeWidth="8"
+              strokeLinecap="round"
+            />
+            <line
+              x1="10"
+              y1="50"
+              x2="90"
+              y2="50"
+              stroke="black"
+              strokeWidth="8"
+              strokeLinecap="round"
+            />
+            <line
+              x1="10"
+              y1="75"
+              x2="90"
+              y2="75"
+              stroke="black"
+              strokeWidth="8"
+              strokeLinecap="round"
+            />
+          </svg>
         </button>
       </div>
     </header>
