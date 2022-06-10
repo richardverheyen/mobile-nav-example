@@ -8,14 +8,17 @@ https://rv-mobile-nav-example.web.app
 - Using components for storing Navigation and Socials which don’t have their own stylesheets
 - Position fixed header, mobile navigation menu and hamburger icon
 - Styling the a, a:link and a:visited elements
-- Transition rule (<rule>, <length>, <timing-function>) eg: (all, 300ms, linear)
+- Transition rule (rule, length, timing-function) eg: (all, 300ms, linear)
 - Using javascript to conditionally display html classes, and control css
 - Prevent body scrolling with body { overflow: hidden;}
-- Layer the <main>, <header>, <aside> and <button.hamburger> with z-index rules
+- Layer the main, header, aside and button.hamburger with z-index rules
 - Use the ‘document’ keyword to grab the document
 - Use the .querySelector() function which is always available on the document element to return an Element
 - Use the .addEventListener() function which is always available on Elements to listen for ‘click’ events and run a function
 - Rewrite our javascript solution in the React way (where we use the useEffect hook to run our function whenever ‘menuOpen’ changes, and tidy up when we’re done.)
+- hide mobile menu on resize events
+- add another useEffect hook to close the mobileMenu when a navigation event happens
+- animate the hamburger icon into a cross when the mobile menu is open
 
 
 ## Available Scripts
