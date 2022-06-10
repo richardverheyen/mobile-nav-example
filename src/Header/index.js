@@ -16,6 +16,7 @@ export default function Header() {
     if (menuOpen) {
       document.body.classList.add('mobile-nav-open');
       document.querySelector('main').addEventListener('click', handleBodyClick);
+      window.addEventListener('resize', handleBodyClick);
 
     } else {
       document.body.classList.remove('mobile-nav-open');
@@ -23,6 +24,7 @@ export default function Header() {
 
     return () => {
       document.querySelector('main').removeEventListener('click', handleBodyClick);
+      window.removeEventListener('resize', handleBodyClick);
     }
   }, [menuOpen])
 
